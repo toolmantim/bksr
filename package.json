@@ -1,0 +1,17 @@
+{
+  "name": "bksr",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "inquirer": "^5.2.0",
+    "js-yaml": "^3.11.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "scripts": {
+    "lint": "standard"
+  },
+  "bin": {
+    "bksr": "./src/bksr.js"
+  }
+}

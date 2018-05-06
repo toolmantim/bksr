@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rsync -qrtvu "$BUILDKITE_REPO/" "$BUILDKITE_BUILD_CHECKOUT_PATH"

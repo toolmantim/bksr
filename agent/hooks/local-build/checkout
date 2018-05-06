@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# No-op checkout that just runs the build in PWD
+cd "$BUILDKITE_REPO" || exit 1
