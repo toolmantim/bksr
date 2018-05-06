@@ -1,5 +1,7 @@
 # bksr - Buildkite Step Runner
 
+[![NPM package](https://img.shields.io/npm/v/bksr.svg)](https://www.npmjs.com/package/bksr)
+
 Run and test your Buildkite pipeline steps locally, just as they'd run in CI, using the buildkite-agent itself.
 
 ## Usage
@@ -15,7 +17,7 @@ $ bksr
 ## Installation
 
 ```
-npm i -g bksr
+$ npm i -g bksr
 ```
 
 ## Requirements
@@ -26,11 +28,8 @@ npm i -g bksr
 
 * Support pipelines from STDIN (`bksr -`)
 * Substitute env vars
-
-Further ideas:
-
-* Run pipeline steps in sequence
-* Figuring out artifact/metadata/pipeline commands
+* Run pipeline steps in sequence?
+* Figuring out artifact/metadata/pipeline commands?
 
 ## Previous artwork
 
