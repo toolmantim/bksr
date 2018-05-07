@@ -1,6 +1,5 @@
 const debug = require('debug')('bksr')
-const { promisify } = require('util')
-const readFile = promisify(require('fs').readFile)
+const readFile = require('util').promisify(require('fs').readFile)
 const yaml = require('js-yaml')
 
 const readPipeline = async () => {

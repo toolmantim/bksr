@@ -1,7 +1,6 @@
 const debug = require('debug')('bksr')
 const path = require('path')
-const { promisify } = require('util')
-const exec = promisify(require('child_process').exec)
+const exec = require('util').promisify(require('child_process').exec)
 const pluginsEnv = require('./plugins-env')
 
 // Returns the envs that `buildkite-agent bootstrap` requires
@@ -43,14 +42,8 @@ const bootstrapEnv = async (step) => {
   env.BUILDKITE_JOB_ID = 42
   env.BUILDKITE_COMMAND = step.command || (step.commands && step.commands.join('\n')) || ''
 
-  // The bootstrap expects an array of plugins, but the pipeline is defined as
-  // an object. So we have to convert from:
-  //   {"plugin1#v1.0.0":{...}, "plugin2#v1.0.0":{...}}
-  // to:
-  //   [{"plugin1#v1.0.0":{...}}, {"plugin2#v1.0.0":{...}}]
-
   env.BUILDKITE_PLUGINS = pluginsEnv(step.plugins)
-  
+
   // todo: handle step envs
 
   return env

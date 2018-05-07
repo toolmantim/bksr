@@ -46,16 +46,34 @@ $ npx bksr
 
 ## Roadmap
 
-* Support step/pipeline env vars
-* Support pipelines from STDIN (`bksr -`)
-* Option for running all pipeline steps in sequence?
+* `--help` output
+* Specifying custom pipeline.yml paths
+* Support reading pipelines from STDIN (`bksr -`)
+* Support setting env vars based on pipeline.yml
+* Support env var substituion in pipeline.yml
 * Stubbing out artifact/metadata/pipeline commands?
+* Option for running all pipeline steps in sequence?
 
 ## Previous artwork
 
 * https://github.com/SomeoneWeird/bkrun
 
 ## Developing
+
+At the moment all dev and testing is by running `src/bksr.js` from the command line directly:
+
+```
+$ cd ~/some-project
+$ ~/path-to-bksr-checkout/src/bksrc.js
+```
+
+For convenience, you can symlink it into your `$PATH`, for example:
+
+```
+$ ln -s ~/path-to-bksr-checkout/src/bksrc.js /usr/local/bin/bksr
+$ cd ~/some-project
+$ bksr
+```
 
 There's no tests yet, but they're coming soon.
 
