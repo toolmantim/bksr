@@ -34,10 +34,16 @@ $ bksr
 $ npm i -g bksr
 ```
 
-Or run it directly using [npx](https://github.com/zkat/npx):
+Or, run it directly using [npx](https://github.com/zkat/npx):
 
 ```
 $ npx bksr
+```
+
+Or if you'd like to be a little more srs about it:
+
+```
+$ ln -s $(which bksr) /usr/local/bin/bksrsly
 ```
 
 ## Requirements
