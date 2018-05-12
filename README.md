@@ -83,20 +83,14 @@ $ cd ~/some-project
 $ ~/path-to-bksr-checkout/bin/bksrc.js
 ```
 
-To run the tests locally:
-
-```
-$ npm test
-```
-
-Or via docker-compose:
+To run the unit and integration tests:
 
 ```
 $ docker-compose run app npm run test
 $ docker-compose run app npm run bats
 ```
 
-Or using bksr itself 😱:
+Or, you can use bksr itself 😱
 
 ```
 $ bin/bksr.js --all
