@@ -64,3 +64,14 @@ load "/usr/local/lib/bats/load.bash"
   assert_output --partial "Running 0 steps"
   assert_success
 }
+
+@test "bksr --pipeline (stdin)" {
+  run cat test/pipeline.kitchensink.yml | bin/bksr.js --pipeline '-' --all
+  
+  assert_output --partial "Running 3 steps"
+  assert_output --partial "This is a command step"
+  assert_output --partial "This is a multi-command (1)"
+  assert_output --partial "This is a multi-command (2)"
+  assert_output --partial "Searching for Clowns"
+  assert_success
+}
