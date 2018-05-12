@@ -69,6 +69,7 @@ Options:
 
 ## Roadmap
 
+* Self-contained binaries (with homebrew tap)
 * Support setting env vars based on pipeline.yml
 * Support env var substituion in pipeline.yml
 * Stubbing out artifact/metadata/pipeline commands?
