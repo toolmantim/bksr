@@ -11,6 +11,7 @@
     "get-stdin": "^6.0.0",
     "inquirer": "^5.2.0",
     "js-yaml": "^3.11.0",
+    "update-notifier": "^2.5.0",
     "yargs": "^11.0.0"
   },
   "devDependencies": {
