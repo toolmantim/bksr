@@ -6,20 +6,6 @@ Run and test your [Buildkite](https://buildkite.com/) pipeline steps locally, ju
 using the [buildkite-agent](https://buildkite.com/docs/agent) itself.
 
 ```
-$ cat .buildkite/pipeline.yml 
-steps:
-  - label: ":shell: Shellcheck"
-    plugins:
-      shellcheck#v1.0.1:
-        files: hooks/**
-  - label: ":sparkles: Lint"
-    plugins:
-      plugin-linter#v1.0.0:
-        name: my-plugin
-  - label: ":shell: Tests"
-    plugins:
-      docker-compose#v2.1.0:
-        run: tests
 $ bksr
 ? Choose a pipeline step to run (Use arrow keys)
 ❯ :shell: Shellcheck
@@ -120,7 +106,6 @@ $ bin/bksr.js --all
 The following command will:
 
 * Ensure you’re on master
-* Ask for whether it's a major, minor or patch release
 * Update the version number in package.json
 * Create and push the git tag
 * Open GitHub releases so you can fill out release notes, and open previous
