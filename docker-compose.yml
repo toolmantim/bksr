@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  app:
+    build: .
+    volumes:
+      # Link these through to avoid having to rebuild to test changes each time
+      - "./bin:/src/bin"
+      - "./lib:/src/lib"
+      - "./test:/src/test"
+      - "./package.json:/src/package.json"
