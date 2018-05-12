@@ -127,7 +127,7 @@ The following command will:
   releases so you can copy+pasta
 
 ```bash
-git checkout master && git pull && npm version
+git checkout master && git pull && npm version [major | minor | patch]
 ```
 
 ## Previous artwork
