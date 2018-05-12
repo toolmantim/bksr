@@ -19,7 +19,7 @@ Features:
 * Won’t accidentally run steps designed for branches (such as 'master' only release steps)
 * Can run dynamic pipelines via STDIN
 * Can run all steps in sequence, including specifying a branch for branch filtering
-* Can run a fresh un-cached checkout, emulating exactly what an agent might do
+* Can run a fresh checkout, emulating a clean CI agent environment
 
 ## Installation
 
