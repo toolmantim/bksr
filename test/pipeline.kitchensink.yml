@@ -1,0 +1,11 @@
+steps:
+  - command: echo 'This is a command step'
+  - commands:
+    - echo 'This is a multi-command (1)'
+    - echo 'This is a multi-command (2)'
+  - label: ':clown:'
+    plugins:
+      detect-clowns: ~
+  - wait
+  - command: echo 'This is a master branch command step'
+    branches: master

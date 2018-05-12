@@ -1,0 +1,11 @@
+steps:
+  - label: ":node: Units"
+    command: npm run test
+    plugins:
+      docker-compose#v2.2.0:
+        run: app
+  - label: ":shell: Integration"
+    command: npm run bats
+    plugins:
+      docker-compose#v2.2.0:
+        run: app
