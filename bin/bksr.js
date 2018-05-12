@@ -45,7 +45,7 @@ const argv = require('yargs')
   .example('$0 --all', 'Runs all the steps')
   .example('$0 --step ":npm: Tests"', 'Runs a single step')
   .example('$0 --branch pr123', 'Runs the steps that match branch pr123')
-  .example('pipeline.sh | $0 --pipeline "-"', 'Runs a dynamic pipeline')
+  .example('pipeline.sh | $0 --pipeline \'-\'', 'Runs a dynamic pipeline')
   .version(pkg.version)
   .help()
   .argv
