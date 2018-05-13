@@ -3,7 +3,7 @@
 [![NPM package](https://img.shields.io/npm/v/bksr.svg)](https://www.npmjs.com/package/bksr)
 
 Run and test your [Buildkite](https://buildkite.com/) pipeline steps locally, just as they'd run in CI,
-using the [buildkite-agent](https://buildkite.com/docs/agent) itself.
+using the [buildkite-agent bootstrap](https://buildkite.com/docs/agent) itself.
 
 ```
 $ bksr
@@ -69,10 +69,15 @@ Options:
 
 ## Roadmap
 
+* Fix examples not showing in `--help`
+* Move build and plugin dir from `/tmp/bkrun` to `~/.bkrun`
+* Check for new updated versions using [update-check](https://github.com/zeit/update-check)
 * Self-contained binaries (with homebrew tap)
 * Support setting env vars based on pipeline.yml
 * Support env var substituion in pipeline.yml
-* Stubbing out artifact/metadata/pipeline commands?
+* Hide build output via header collapsing
+* Local-mode artifact/metadata/pipeline commands
+* Bundling the buildkite-agent binary maybe?
 
 ## Developing
 
