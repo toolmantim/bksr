@@ -1,3 +1,7 @@
 node_modules
 .nyc_output
+<<<<<<< HEAD
 docker-compose-logs
+=======
+pkg
+>>>>>>> Generate binary releases
