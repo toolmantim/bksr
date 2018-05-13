@@ -79,7 +79,7 @@ Options:
 
 ### Bigger stuff
 
-* Support env var substituion in pipeline.yml (buildkite/agent$765)
+* Support env var substituion in pipeline.yml (buildkite/agent#765)
 * Support setting env vars based on pipeline.yml
 * Hide build output via header collapsing
 * Local-mode artifact/metadata/pipeline commands
