@@ -3,8 +3,6 @@
 const cli = require('../lib/cli')
 const pkg = require('../package.json')
 
-require('update-notifier')({pkg}).notify()
-
 const argv = require('yargs')
   .usage('$0', pkg.description)
   .option('step', {
