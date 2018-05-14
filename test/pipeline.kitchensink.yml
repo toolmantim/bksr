@@ -9,3 +9,5 @@ steps:
   - wait
   - command: echo 'This is a master branch command step'
     branches: master
+  - block: ":ship: Release"
+    prompt: "Release?"
