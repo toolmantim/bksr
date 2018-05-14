@@ -1,7 +1,8 @@
 version: '3.4'
 services:
-  app:
+  tests:
     build: .
+    command: bash -c "npm run test && npm run bats"
     volumes:
       # Link these through to avoid having to rebuild to test changes each time
       - "./bin:/src/bin"
