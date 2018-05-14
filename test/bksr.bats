@@ -66,7 +66,8 @@ load "/usr/local/lib/bats/load.bash"
 }
 
 @test "bksr --pipeline (stdin)" {
-  run cat test/pipeline.kitchensink.yml | bin/bksr.js --pipeline '-' --all
+  # Needs bash -c because of the pipe
+  run bash -c "cat test/pipeline.kitchensink.yml | bin/bksr.js --pipeline '-' --all"
   
   assert_output --partial "Running 3 steps"
   assert_output --partial "This is a command step"
