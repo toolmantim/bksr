@@ -22,7 +22,7 @@
     "lint": "standard",
     "test": "tap --cov lib/**/*.test.js",
     "bats": "bats test/*.bats",
-    "version": "git push && git push --tags && npm publish && open \"$(node -e 'p=require(\"./package.json\"); console.log(`https://github.com/${p.repository}/releases/new?tag=v${p.version}`)')\""
+    "postversion": "git push && git push --tags && npm publish && open \"$(node -e 'p=require(\"./package.json\"); console.log(`https://github.com/${p.repository}/releases/new?tag=v${p.version}`)')\""
   },
   "bin": {
     "bksr": "./bin/bksr.js"
