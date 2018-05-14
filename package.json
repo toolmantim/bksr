@@ -1,6 +1,6 @@
 {
   "name": "bksr",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Run and test your Buildkite pipeline steps locally, just as they'd run in CI, using the buildkite-agent itself.",
   "author": "Tim Lucas (http://toolmantim.com)",
   "license": "ISC",
