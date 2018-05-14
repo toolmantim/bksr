@@ -73,7 +73,6 @@ Options:
 
 * Fix examples not showing in `--help`
 * Move build and plugin dir from `/tmp/bkrun` to `~/.bkrun`
-* Check for new updated versions using [update-check](https://github.com/zeit/update-check)
 * Self-contained binaries to GitHub release using [pkg](https://www.npmjs.com/package/pkg)
 * Homebrew
 

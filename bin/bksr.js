@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
+const pkg = require('../package')
 const cli = require('../lib/cli')
-const pkg = require('../package.json')
+const yargs = require('yargs')
+const updateCheck = require('../lib/update-check')
 
-const argv = require('yargs')
+const argv = yargs
   .usage('$0', pkg.description)
   .option('step', {
     describe: 'Label of the step to run',
@@ -50,7 +52,7 @@ const argv = require('yargs')
   .help()
   .argv
 
-cli(argv)
+updateCheck().then(() => cli(argv))
 
 process.on('unhandledRejection', (err) => {
   console.error(err)
