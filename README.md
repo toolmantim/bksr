@@ -97,8 +97,7 @@ $ ~/path-to-bksr-checkout/bin/bksrc.js
 To run the unit and integration tests:
 
 ```
-$ docker-compose run app npm run test
-$ docker-compose run app npm run bats
+$ docker-compose run --rm tests
 ```
 
 Or, you can use bksr itself 😱
