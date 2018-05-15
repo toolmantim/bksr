@@ -15,6 +15,7 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "pkg": "^4.3.1",
     "standard": "^11.0.1",
     "tap": "^11.1.5"
   },
@@ -22,7 +23,8 @@
     "lint": "standard",
     "test": "tap --cov lib/**/*.test.js",
     "bats": "bats test/*.bats",
-    "postversion": "git push && git push --tags && npm publish && open \"$(node -e 'p=require(\"./package.json\"); console.log(`https://github.com/${p.repository}/releases/new?tag=v${p.version}`)')\""
+    "postversion": "git push && git push --tags && npm publish && npm run pkg && open pkg/compressed && open \"$(node -e 'p=require(\"./package.json\"); console.log(`https://github.com/${p.repository}/releases/new?tag=v${p.version}`)')\"",
+    "pkg": "rm -rf pkg && pkg --out-path pkg . && cd pkg && mkdir -p compressed && zip -r compressed/bksr-macos.zip bksr-macos && tar -zcvf compressed/bksr-linux.tar.gz bksr-linux && zip -r compressed/bksr-win.zip bksr-win.exe && ls -l compressed"
   },
   "bin": {
     "bksr": "./bin/bksr.js"
