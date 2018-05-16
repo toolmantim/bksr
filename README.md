@@ -72,8 +72,6 @@ Options:
 ### Small stuff
 
 * Fix examples not showing in `--help`
-* Move build and plugin dir from `/tmp/bkrun` to `~/.bkrun`
-* Self-contained binaries to GitHub release using [pkg](https://www.npmjs.com/package/pkg)
 * Homebrew
 
 ### Bigger stuff
