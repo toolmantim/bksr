@@ -23,11 +23,19 @@ Features:
 
 ## Installation
 
+On macOS using [Homebrew](https://brew.sh):
+
+```
+$ brew install toolmantim/bksr/bksr
+```
+
+Everywhere else:
+
 ```
 $ npm i -g bksr
 ```
 
-Or, run it directly using [npx](https://github.com/zkat/npx):
+Or, with [npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
 
 ```
 $ npx bksr
@@ -36,7 +44,7 @@ $ npx bksr
 Or, like srsly:
 
 ```
-$ ln -s $(which bksr) /usr/local/bin/bksrsly
+$ alias bksrsly=bksr
 $ bksrsly
 ? Choose a pipeline step to run (Use arrow keys)
 ❯ :shell: Shellcheck
