@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# We want to distribute a .tar.gz file with our GitHub releases that can be used
+# in the HomeBrew recipes. We use `npm pack` to create one that matches what's
+# distributed on npm, but we need to remove the `package/` directory prefix that
+# it uses.
+
 set -euo pipefail
 
 # Creates a tgz but in the directory 'package' which we need to remove
