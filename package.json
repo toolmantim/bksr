@@ -16,8 +16,8 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
-    "standard": "^11.0.1",
-    "tap": "^11.1.5"
+    "standard": "11.0.1",
+    "tap": "11.1.5"
   },
   "scripts": {
     "lint": "standard",
