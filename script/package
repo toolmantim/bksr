@@ -19,7 +19,7 @@ rm -rf pkg && mkdir -p pkg && tar -zxf "$f" --strip 1 -C pkg
 )
 
 # Place the final file in the `pkg` dir
-rm -rf pkg && mkdir pkg && mv "$f" pkg
+rm -rf pkg && mkdir pkg && mv "$f" pkg/bksr.tgz
 
 echo "🙌 Created pkg/$f ready for release"
 
