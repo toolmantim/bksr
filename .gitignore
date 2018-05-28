@@ -2,3 +2,4 @@ node_modules
 .nyc_output
 docker-compose-logs
 pkg
+*.tgz
