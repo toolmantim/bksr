@@ -6,6 +6,7 @@
   "license": "ISC",
   "repository": "toolmantim/bksr",
   "main": "lib/cli.js",
+  "installMethod": "npm",
   "dependencies": {
     "debug": "^3.1.0",
     "get-stdin": "^6.0.0",
@@ -22,8 +23,8 @@
     "lint": "standard",
     "test": "tap --cov lib/**/*.test.js",
     "bats": "bats test/*.bats",
-    "postversion": "git push && git push --tags && npm run pkg && npm publish && open pkg/compressed && open \"$(node -e 'p=require(\"./package.json\"); console.log(`https://github.com/${p.repository}/releases/new?tag=v${p.version}`)')\"",
-    "pkg": "rm -rf *.tgz pkg && mkdir -p pkg && npm pack && mv *.tgz pkg && cd pkg && tar -zxvf *.tgz && rm *.tgz && tar -czf bksr.tgz -C package . && rm -rf package && open ."
+    "postversion": "git push && git push --tags && npm publish && open pkg/compressed && open \"$(node -e 'p=require(\"./package.json\"); console.log(`https://github.com/${p.repository}/releases/new?tag=v${p.version}`)')\" && npm run pkg",
+    "pkg": "./script/package && open pkg"
   },
   "bin": {
     "bksr": "./bin/bksr.js"

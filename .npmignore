@@ -5,3 +5,6 @@ Dockerfile
 pkg
 .nyc_output
 *.tgz
+.github
+test
+script
