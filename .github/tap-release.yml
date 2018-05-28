@@ -1,0 +1,27 @@
+asset: "https://registry.npmjs.org/bksr/-/bksr-$VERSION_NUMBER.tgz"
+tap: toolmantim/homebrew-bksr/bksr.rb
+template:
+  require "language/node"
+
+  class Bksr < Formula
+    homepage "$REPO_WEBSITE"
+    desc "$REPO_DESCRIPTION"
+    url "$STABLE_URL"
+    version "$STABLE_VERSION"
+    sha256 "$STABLE_SHA256"
+
+    bottle :unneeded
+
+    depends_on "node" => :recommended
+
+    def install
+      system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+      bin.install_symlink Dir["#{libexec}/bin/*"]
+      libexec.install Dir["*"]
+      inreplace Dir["#{libexec}/package.json"], '"installationMethod": "npm"', '"installationMethod": "homebrew"'
+    end
+
+    test do
+      assert_match "bksr #{version}", shell_output("#{bin}/bksr --version 2>&1")
+    end
+  end
