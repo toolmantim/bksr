@@ -1,0 +1,18 @@
+template: |
+  ## What's Changed
+
+  $CHANGES
+
+  ## Upgrading
+
+  If you're using Homebrew:
+
+  ```shell
+    brew upgrade bksr
+  ```
+
+  If you're using npm:
+
+  ```shell
+    npm install -g bksr
+  ```
