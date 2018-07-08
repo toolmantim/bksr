@@ -18,8 +18,7 @@ template: >
     def install
       system "npm", "install", *Language::Node.std_npm_install_args(libexec)
       bin.install_symlink Dir["#{libexec}/bin/*"]
-      libexec.install Dir["*"]
-      inreplace Dir["#{libexec}/package.json"], '"installationMethod": "npm"', '"installationMethod": "homebrew"'
+      inreplace Dir["#{libexec}/lib/node_modules/bksr/package.json"], '"installationMethod": "npm"', '"installationMethod": "homebrew"'
     end
 
     test do
