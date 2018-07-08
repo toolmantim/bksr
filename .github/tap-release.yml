@@ -1,4 +1,5 @@
 # Config for https://github.com/apps/tap-release
+
 url: "https://registry.npmjs.org/bksr/-/bksr-$VERSION_NUMBER.tgz"
 tap: toolmantim/homebrew-bksr/bksr.rb
 template: >
