@@ -3,7 +3,7 @@
 FROM buildkite/plugin-tester:latest@sha256:a784b49bb241291feb47b578a2cb58938d3565dff5b0f6d9bf627036cbd7f419 as bats
 
 # And let's get the latest v3 agent
-FROM buildkite/agent:3@sha256:56d57b8ccb2f8bd7d1d09d021a5a9c668da491ae1a97dcfc6b916b3ce6fd93e2 as agent
+FROM buildkite/agent:3@sha256:1812fcd61c4e122fedbf0c749f8b0ec408678600260e495ca34bc0e2f7fd638a as agent
 
 FROM node:10.6.0-alpine@sha256:c30b9a5bb5faba796d4df5c74310702e25bcca227786310dae9b5a08498b5e4a
 COPY    --from=bats /usr/local/bin/ /usr/local/bin/
