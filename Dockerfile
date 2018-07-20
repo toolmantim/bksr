@@ -1,6 +1,6 @@
 # Let's use the buildkite plugin-tester to get bats, as it has pretty up-to-date
 # bats support and uses Lox's bats-mock
-FROM buildkite/plugin-tester:latest@sha256:a784b49bb241291feb47b578a2cb58938d3565dff5b0f6d9bf627036cbd7f419 as bats
+FROM buildkite/plugin-tester:latest@sha256:7c2d08e8d6dc32637236105e82f6c161fe2a2c3098e9035a92eb1401b6593bdf as bats
 
 # And let's get the latest v3 agent
 FROM buildkite/agent:3@sha256:1812fcd61c4e122fedbf0c749f8b0ec408678600260e495ca34bc0e2f7fd638a as agent
