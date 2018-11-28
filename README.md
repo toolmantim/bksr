@@ -1,3 +1,5 @@
+> This has been discontinued, and you should now use the [Buildkite CLI](https://github.com/buildkite/cli)
+
 # bksr - Buildkite Step Runner
 
 [![NPM package](https://img.shields.io/npm/v/bksr.svg)](https://www.npmjs.com/package/bksr)
