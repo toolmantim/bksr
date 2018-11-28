@@ -1,4 +1,4 @@
-> This has been discontinued, and you should now use the [Buildkite CLI](https://github.com/buildkite/cli)
+> ⚠️ This project has been discontinued. Please use the [Buildkite CLI](https://github.com/buildkite/cli)
 
 # bksr - Buildkite Step Runner
 
